@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <iostream>
 #include <atomic>
@@ -8,6 +8,47 @@
 
 using byte = uint8_t;
 
+// ==========================
+//类	作用
+//StreamEntry	描述音频文件信息
+//StreamBuffer	一块音频数据缓存
+//Stream	管理读取流程
+//Source	一个播放实例
+//Decoder	压缩→PCM
+//
+//完整流程：
+//
+//StreamEntry
+//    |
+//    |
+//    v
+//
+//Stream
+//    |
+//    |
+//    +---- ioBuffer
+//    |        |
+//    |        v
+//    |      硬盘读取
+//    |
+//    +---- buffers[0]
+//    |
+//    +---- buffers[1]
+//             |
+//             v
+//
+//          Decoder
+//
+//             |
+//             v
+//
+//            PCM
+//
+//             |
+//             v
+//
+//          Audio Device
+// ==========================
 
 // ==========================
 // Constants

@@ -1,4 +1,4 @@
-#include "fuckingHeader.h"
+﻿#include "fuckingHeader.h"
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
